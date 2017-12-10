@@ -2,7 +2,7 @@ var express = require('express');
 var User = require('../api/controllers/userController');
 var router = express.Router();
 
-router.get('/user', function(req, res) {
+router.get('/', function(req, res) {
   User.getAllUsers(req,res);
 });
 
