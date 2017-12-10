@@ -11,6 +11,7 @@ var users = require('./routes/users');
 var user = require('./routes/userRoutes');
 var app = express();
 var mongoose = require('mongoose');
+var categorie = require('./routes/categorieRoutes')
 var uri = 'mongodb://localhost/tunihack'
 /*mongoose.createConnection(uri, {
   useMongoClient: true,
@@ -41,6 +42,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/api',user);
+app.use('/api/categorie',categorie);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

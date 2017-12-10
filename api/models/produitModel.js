@@ -1,13 +1,16 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 /*
-Categorie Schema
+Produit Schema
  */
 
 
 var Categorie = new Schema({
-    CategorieName: {
+    ProduitName: {
         type: String
+    },
+    ProduitPrice: {
+        type: Number
     },
 
 
