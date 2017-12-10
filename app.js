@@ -11,13 +11,20 @@ var users = require('./routes/users');
 var user = require('./routes/userRoutes');
 var app = express();
 var mongoose = require('mongoose');
-var uri = 'mongodb://localhost:27017/tunihack'
-mongoose.createConnection(uri, {
+var uri = 'mongodb://localhost/tunihack'
+/*mongoose.createConnection(uri, {
   useMongoClient: true,
 },function(error) {
   console.log(error);
+});*/
+//mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/tunihack',{
+  useMongoClient : true
+},function(){
+  console.log(mongoose.connection.readyState);
 });
-mongoose.Promise = global.Promise;
+console.log(mongoose.connection.readyState);
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

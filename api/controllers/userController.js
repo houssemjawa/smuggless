@@ -2,8 +2,7 @@
 var User = require('../models/userModel')
 var mongoose = require('mongoose');
 //var jwt = require('jsonwebtoken');
-var user = function() {
-  this.register = function(req,res){
+  exports.register = function(req,res){
     var newUser = new User();
     console.log(req.body);
     console.log(newUser)
@@ -21,7 +20,7 @@ var user = function() {
       });
   };
 
-  this.sign_in = function(req,res){
+  exports.sign_in = function(req,res){
     User.findOne({
         userName: req.body.userName
       }, function(err, user) {
@@ -38,21 +37,20 @@ var user = function() {
       });
   };
 
-  this.loginRequired = function(req, res, next){
+  exports.loginRequired = function(req, res, next){
     if (req.user) {
         next();
       } else {
         return res.status(401).json({ message: 'Unauthorized user!' });
       }
   };
-  this.getAllUsers = function(req,res){
+  exports.getAllUsers = function(req,res){
     User.find(function(err,users){
-      if (err)
-      res.send(err);
-      res.json(users);
+      if (err){
+        res.send(err);
+      }
       console.log(users);
+      res.json(users);
+
     });
   };
-
-};
-module.exports = new User();

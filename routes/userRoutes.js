@@ -1,12 +1,12 @@
 var express = require('express');
-var user = require('../api/controllers/userController');
+var User = require('../api/controllers/userController');
 var router = express.Router();
 
-router.get('/user', function(req, res, next) {
-  user.getAllUsers;
+router.get('/user', function(req, res) {
+  User.getAllUsers(req,res);
 });
 
 router.post('/register', function(req, res) {
- user.register;
+ User.register(req,res);
 });
-module.exports = router
+module.exports = router;
