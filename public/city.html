@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>G2FOSS's SmartGov</title>
+  <!-- Bootstrap core CSS-->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html">SmartGov</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="index.html">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Tableau de bord</span>
+          </a>
+        </li>
+
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+          <a class="nav-link" href="insight.html">
+            <i class="fa fa-fw fa-link"></i>
+            <span class="nav-link-text">Insight</span>
+          </a>
+        </li>
+
+
+
+      </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+    <ul class="navbar-nav ml-auto">
+
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+        <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+    </li>
+</ul>
+
+  </nav>
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <h1>Profil de Ben Arous</h1>
+          <p></p>
+
+    <!--      <div class="card" id="map" style="width:100%; height:100%;min-height:200px;"></div> -->
+      <img src="https://maps.googleapis.com/maps/api/staticmap?center=Ben+Arous,+TN&zoom=8&size=5000x200&maptype=roadmap&key=" style="width:100%; max-height:200px;">
+
+        </div>
+      </div>
+
+      <div class="mb-0 mt-4">
+        <i class="fa fa-newspaper-o"></i> Insight sur tout le pays</div>
+      <hr class="mt-2">
+
+      <div class="row">
+        <div class="col-lg-8">
+          <!-- Example Bar Chart Card-->
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-bar-chart"></i>TCB de chaque governant</div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-8 my-auto">
+                  <canvas id="myBarChart" width="100" height="50"></canvas>
+                </div>
+                <div class="col-sm-4 text-center my-auto">
+                  <div class="h4 mb-0 text-primary">$34,693</div>
+                  <div class="small text-muted">Taux de production</div>
+                  <hr>
+                  <div class="h4 mb-0 text-warning">$18,474</div>
+                  <div class="small text-muted">Taux de consomation</div>
+                  <hr>
+                  <div class="h4 mb-0 text-success">$16,219</div>
+                  <div class="small text-muted">Defecit</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer small text-muted">Mise à jour il y a 5s</div>
+          </div>
+          <!-- Card Columns Example Social Feed-->
+          <div class="mb-0 mt-4">
+            <i class="fa fa-newspaper-o"></i></div>
+          <hr class="mt-2">
+
+          <!-- /Card Columns-->
+        </div>
+        <div class="col-lg-4">
+          <!-- Example Pie Chart Card-->
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-pie-chart"></i>TCB Catégorisés</div>
+            <div class="card-body">
+              <canvas id="myPieChart" width="100%" height="100"></canvas>
+            </div>
+            <div class="card-footer small text-muted">Mise à jour il y a 5s</div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="progress">
+        <p></p>
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">TCB des produits alimentaires</div>
+      </div>
+<p></p>
+      <div class="progress">
+          <p></p>
+        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">TCB du TABAC</div>
+      </div>
+      <p></p>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">TCB des produits cosmétiques</div>
+      </div>
+      <p></p>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">TCB du carburant</div>
+      </div>
+      <p></p>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">TCB de l'électroniques</div>
+      </div><p></p>
+
+    </div>
+
+
+
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>Copyright © G2FOSS's SmartGov 2017</small>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Annuler</button>
+            <a class="btn btn-primary" href="login.html">Déconnexion</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  /*    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 7
+         // center: {lat: -34.397, lng: 150.644}
+        });
+        var geocoder = new google.maps.Geocoder();
+
+       geocodeAddress(geocoder, map, "Tataouine, TN");
+      }
+
+      function geocodeAddress(geocoder, resultsMap, ad) {
+        var address = ad;
+        //var address = document.getElementById('address').value;
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
+            resultsMap.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+              map: resultsMap,
+              position: results[0].geometry.location
+            });
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      }*/
+    </script>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-3">38%</h1>
+              <p class="lead">Des produits provient de la contrebande</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="col">
+
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-3">62%</h1>
+              <p class="lead">Des produits provient de routes legitimes</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-secondary btn-lg btn-block btn-warning">Envoyer une alerte aux citoyens</button>
+          <button type="button" class="btn btn-secondary btn-lg btn-block">Modifier les parametres</button>
+          <button type="button" class="btn btn-secondary btn-lg btn-block">Modifier l'algorithme de prédiction</button>
+
+
+        </div>
+        <div class="col">
+<img src="img/gov.png" width="100%">
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Example DataTables Card-->
+    <div class="card mb-3">
+      <div class="card-header">
+        <i class="fa fa-table"></i> Historique des activités</div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Catégorie</th>
+                <th>Production</th>
+                <th>COnsommation</th>
+                <th>Defeciet</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+
+
+              <tr><th>11/1/2011</th> <th>produits de construction</th> <th>40140</th> <th>14017</th> <th>26123</th></tr>
+
+
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card-footer small text-muted">Mise à jour il y a 5s</div>
+    </div>
+
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN4WTQ-iea3xPIkwyXFG7Tbfm392V0cN8&callback=initMap">
+    </script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin.min.js"></script>
+    <!-- Custom scripts for this page-->
+    <script src="js/sb-admin-charts.js"></script>
+
+    <script src="vendor/datatables/jquery.dataTables.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+    <script src="js/sb-admin-datatables.min.js"></script>
+
+
+</div>
+</body>
+
+</html>
