@@ -5,14 +5,14 @@ Produit Schema
  */
 
 
-var Categorie = new Schema({
+var Produit = new Schema({
     ProduitName: {
         type: String
     },
     ProduitPrice: {
         type: Number
     },
-
+    Categorie: [{ type: Schema.Types.ObjectId, ref: 'Categorie' }]
 
 });
-module.exports = mongoose.model('Categorie',Categorie);
+module.exports = mongoose.model('Produit',Produit);

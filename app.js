@@ -11,8 +11,11 @@ var users = require('./routes/users');
 var user = require('./routes/userRoutes');
 var app = express();
 var mongoose = require('mongoose');
-var categorie = require('./routes/categorieRoutes')
-var uri = 'mongodb://localhost/tunihack'
+var categorie = require('./routes/categorieRoutes');
+var produit = require('./routes/produitRoutes');
+var produitlegal = require('./routes/produitlegalRoutes');
+var consommation = require('./routes/consommationRoutes');
+var uri = 'mongodb://localhost/tunihack';
 /*mongoose.createConnection(uri, {
   useMongoClient: true,
 },function(error) {
@@ -43,6 +46,9 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/api/user',user);
 app.use('/api/categorie',categorie);
+app.use('/api/produit',produit);
+app.use('/api/produitlegal',produitlegal);
+app.use('/api/consommation',consommation);
 
 
 // catch 404 and forward to error handler
