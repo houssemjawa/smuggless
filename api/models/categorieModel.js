@@ -6,7 +6,7 @@ Categorie Schema
 
 
 var Categorie = new Schema({
-    CategorieName: {
+    categorieName: {
         type: String
     },
 
