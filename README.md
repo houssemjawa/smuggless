@@ -14,6 +14,5 @@ This README would normally document whatever steps are necessary to get your app
 * Install npm
 * clone project
 * run project:
-	$ cd smuggless
-	$ npm start
+$ cd smuggless && npm start
 
